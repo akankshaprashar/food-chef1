@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Food Chef</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="food.css" />
+
+</head>
+
+<body>
+    <h1>Food chef</h1>
+    <div id="foodform">
+        <form action="#" id="form" style="display: none;">
+            <div style="margin: 20px;padding: 15px;" id="div1">
+                <div>
+                    <label for="name of dish" class="bold"> Name of Dish</label><br />
+                    <span class="feild" style="color: red;"></span>
+                    <input type="text" id="dish" name="Name of dish" class="cin" placeholder="Name of dish" /><br>
+                </div>
+
+                <div>
+                    <label class="bold" for="step of cook">Step of Cook</label><br />
+                    <span class="feild1" style="color: red;"></span>
+                    <textarea id="step" class="cin" placeholder="step of cook"></textarea><br />
+                </div>
+
+                <div>
+                    <label class="bold" for="URL">URL</label><br />
+                    <span class="feild2" style="color: red;"></span>
+                    <input type="text" id="url" name="URL" class="cin" placeholder="URL"><br>
+                </div>
+                <div style="display: flex;justify-content: space-between;">
+                    <div>
+                        <label class="bold" for="name of Ingredints"> Name of Ingredints</label><br />
+                        <span class="feild3" style="color: red;"></span>
+                        <input type="text" id="name" name="Name of Ingredints" class="cn"
+                            placeholder="Name of Ingredints" /><br />
+                    </div>
+
+                    <div>
+                        <label class="bold" for="quantity">quantity of Ingredints</label><br />
+                        <span class="feild4" style="color: red;"></span>
+                        <input type="text" id="quantity" class="cn" placeholder="quantity of Ingredints"><br />
+                    </div>
+
+                    <div>
+                        <label class="bold" for="Unit">Unit</label><br />
+                        <span class="feild5" style="color: red;"></span>
+                        <select id="unit">
+                            <option disabled selected hidden value="">Ingredient Unit</option>
+                            <option value="g">gram</option>
+                            <option value="m">miligram</option>
+                            <option value="kg">kilogram</option>
+                            <option value="ts">Table Spoon </option>
+                            <option value="l">Litre</option>
+                        </select><br>
+                    </div>
+
+                    <div id="div1" style="margin-top:25px ;">
+                        <button id="addInd" value="addInd" onclick="onIngredientSubmit(),event.preventDefault();">Add
+                            Ingredients</button>
+                        <button id="updateInd" value="dd" onclick="onIngredientUpdate(),event.preventDefault();"
+                            style="display: none;">Update
+                            Ingredients</button>
+                    </div>
+                </div>
+            </div>
+            <div id="ingredientData" style="display: none;">
+            </div>
+            <div class="col-lg-12 row m-t-35 center">
+                <button type="button" id="btn" value="submit" onclick="event.preventDefault()">Submit</button>
+                <button type="button" id="update" value="dd" onclick="onupdate()" style="display:none">update</button>
+            </div>
+    </div>
+    </form>
+    ​
+    ​
+    <div id="table" class="col-lg-12" style="margin-bottom: 100px;">
+    </div>
+    <br>
+    <div id="center">
+        <input id="Search" type="text" placeholder="Search..">
+    </div>
+    <div id="table1" onload="tdatashow()">
+        <div class="addData"></div>
+        ​
+        <table id="tbl">
+            <thead>
+                <th>Dish Name</th>
+                <th>Steps to Cook</th>
+                <th>URL</th>
+                <th>Ingredients</th>
+                <th>Edit</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="data">
+                ​
+            </tbody>
+        </table>
+    </div>
+    <div id="Add">
+        <button type="button" id="btn2" onclick="displayForm()" style="margin: 10px; margin-left:428px ;"> Add
+        </button>
+    </div>
+</body>
+<script src="jquery-3.5.1.js"></script>
+<script src="script1.js"></script>
+​
+
+</html>
